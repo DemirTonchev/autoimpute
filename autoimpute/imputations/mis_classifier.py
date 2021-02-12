@@ -13,7 +13,9 @@ This practice is useful to validate models that contain truly missing data.
 import warnings
 import numpy as np
 import pandas as pd
-from xgboost import XGBClassifier
+# from xgboost import XGBClassifier
+# hack it
+from sklearn.ensemble import RandomForestClassifier as XGBClassifier
 from sklearn.base import clone, BaseEstimator, ClassifierMixin
 from sklearn.utils.validation import check_is_fitted
 from autoimpute.utils import check_nan_columns, check_predictors_fit

@@ -20,7 +20,6 @@ REQUIRED = [
     "scipy",
     "pandas",
     "statsmodels",
-    "xgboost",
     "scikit-learn",
     "pymc3",
     "seaborn",
