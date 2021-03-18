@@ -31,7 +31,7 @@ def _nan_col_dropper(data):
 
 def _one_hot_encode(X):
     """Private method to handle one hot encoding for categoricals."""
-    cats = X.select_dtypes(include=(np.object,)).columns.size
+    cats = X.select_dtypes(include=(np.object,'category')).columns.size
     if cats > 0:
         X = pd.get_dummies(X, drop_first=True)
     return X
